@@ -30,14 +30,14 @@ MODEL = "llama-3.1-8b-instant"
 
 llm=ChatGroq(
     model=MODEL,
-    api_key="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",
+    api_key="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",
     temperature=0.1
 )
 
 
 llm2 =ChatGroq(
     model="openai/gpt-oss-20b",
-    api_key="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",
+    api_key="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",
     temperature=0.1
 )
 
@@ -113,7 +113,7 @@ add_expense_prompt = PromptTemplate(
     partial_variables={"format_instructions":parser2.get_format_instructions()},
     template=(
         """ 
-        Extract the amount, merchant name, and date from the user query for adding an expense.
+        Extract the amount(Rs), merchant name, and date from the user query for adding an expense.
         Provide the output in the format:
         {format_instructions}
        
